@@ -1,0 +1,12 @@
+gateway:
+  services:
+    identity:
+      uri: http://localhost:8086
+    catalog:
+      uri: http://localhost:8085
+    basket:
+      uri: http://localhost:8084
+    order:
+      uri: http://localhost:8083
+    payment:
+      uri: http://localhost:8082

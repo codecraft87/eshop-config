@@ -1,0 +1,36 @@
+spring:
+  cloud:
+    gateway:
+      server:
+        webmvc:
+          routes:
+            - id: identity
+              uri: ${gateway.services.identity.uri}
+              predicates:
+                - Path=/eshop/auth/**
+              filters:
+                - RewritePath=/eshop/auth/(?<suburl>.*), /auth/api/${suburl}
+            - id: catalog
+              uri: ${gateway.services.catalog.uri}
+              predicates:
+                - Path=/eshop/products/**
+              filters:
+                - RewritePath=/eshop/products(?<suburl>/.*)?, /products/api${suburl}
+            - id: basket
+              uri: ${gateway.services.basket.uri}
+              predicates:
+                - Path=/eshop/basket/**
+              filters:
+                - RewritePath=/eshop/basket(?<suburl>/.*)?, /basket/api${suburl}
+            - id: order
+              uri: ${gateway.services.order.uri}
+              predicates:
+                - Path=/eshop/orders/**
+              filters:
+                - RewritePath=/eshop/orders(?<suburl>/.*)?, /orders/api${suburl}
+            - id: payment
+              uri: ${gateway.services.payment.uri}
+              predicates:
+                - Path=/eshop/payments/**
+              filters:
+                - RewritePath=/eshop/payments(?<suburl>/.*)?, /payments/api${suburl}
