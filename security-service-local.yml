@@ -3,3 +3,8 @@ spring:
     url: jdbc:postgresql://localhost:5432/eshop-identity
     username: postgres
     password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: false
+      open-in-view: false

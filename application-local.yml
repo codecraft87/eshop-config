@@ -1,14 +1,7 @@
 spring:
-    jpa:
-        hibernate:
-            ddl-auto: update
-            show-sql: false
-            open-in-view: false
+
 logging:
     level:
         root: INFO
-rabbitmq:
-    host: localhost
-    port: 5672
 jwt:
     secret: 4HfMIUIYdVwdnZJXHhLrPAMp2NJmoIUipkAFyCsjqCc=

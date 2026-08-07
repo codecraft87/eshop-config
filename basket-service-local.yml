@@ -3,3 +3,11 @@ spring:
     url: jdbc:postgresql://localhost:5432/eshop-basket
     username: postgres
     password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: false
+      open-in-view: false
+rabbitmq:
+  host: localhost
+  port: 5672
