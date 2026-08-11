@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/eshop-basket
+    url: jdbc:postgresql://localhost:5433/eshop-basket
     username: postgres
     password: postgres
   jpa:
