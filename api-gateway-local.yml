@@ -1,11 +1,11 @@
 gateway:
   services:
     identity:
-      uri: http://localhost:8086
+      uri: http://security-service
     catalog:
-      uri: http://localhost:8085
+      uri: http://catalog-service
     basket:
-      uri: http://localhost:8084
+      uri: http://basket-service
     order:
       uri: http://localhost:8083
     payment:
