@@ -1,12 +1,12 @@
 gateway:
   services:
     identity:
-      uri: http://security-service
+      uri: lb://security-service
     catalog:
-      uri: http://catalog-service
+      uri: lb://catalog-service
     basket:
-      uri: http://basket-service
+      uri: lb://basket-service
     order:
-      uri: http://order-service
+      uri: lb://order-service
     payment:
-      uri: http://payment-service
+      uri: lb://payment-service
