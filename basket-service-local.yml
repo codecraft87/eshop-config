@@ -18,6 +18,10 @@ spring:
           permittedNumberOfCallsInHalfOpenState: 3
           waitDurationInOpenState: 10000
           failureRateThreshold: 50
+  cloud:
+    circuitbreaker:
+      http-services:
+        enabled: false
 rabbitmq:
   host: localhost
   port: 5672
