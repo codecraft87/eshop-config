@@ -8,6 +8,20 @@ spring:
       ddl-auto: update
       show-sql: false
       open-in-view: false
+  cloud:
+    circuitbreaker:
+      http-services:
+        enabled: false
+resilience4j:
+  circuitbreaker:
+    instances:
+      catalogService:
+        minimumNumberOfCalls: 10
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        permittedNumberOfCallsInHalfOpenState: 3
+        waitDurationInOpenState: 10000
+        failureRateThreshold: 50
 rabbitmq:
   host: localhost
   port: 5672
